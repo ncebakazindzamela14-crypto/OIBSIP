@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love modelling</title>
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    nav{
+        position:sticky;
+        top: 0;
+        padding: 15px;
+        display: flex;
+        justify-content:right;
+        gap: 30px;
+    
+        
+    }
+    nav a{
+        text-decoration: none;
+        color: #d61a7f;
+        font-weight: bold;
+    }
+    nav a:hover{
+        color: #240635;
+
+    }
+    h1 {
+            font-size: 36px;
+            line-height: 48px;
+            margin: 0;
+            border: 2px solid #e9bcd4;
+        
+    }
+    h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+             .dark {
+            background: #240635;
+            color: rgb(255, 255, 255);
+        }
+
+        .dark .intro h2 {
+            color: #ccc;
+        }
+
+
+        .dark .intro button {
+            background: white;
+            color: rgb(252, 242, 242);
+        }
+
+        .dark #themeToggle {
+            background: white;
+            color: rgb(15, 1, 1);
+        } 
+        
+    .main-image {
+
+        display: block;
+        width: 250px;
+        max-width: 600px;
+        height: 300px;
+        margin: 0 auto 20px;
+        object-fit: cover;
+        border-radius: 15px;
+
+    }
+    .main-image:hover {
+        transform: scale(1.1);
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap: 20px;
+        max-width: 600px;
+        margin: 30px auto;
+          
+    }
+     .gallery img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 12px;
+        
+    }
+     .gallery img:hover {
+        transform: scale(1.05);
+    }
+    footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+    footer :hover{
+        color: rgb(20, 129, 161);
+        cursor: pointer;
+    }
+  
+        #themeToggle {
+            padding: 12px 25px;
+            border-radius: 30px;
+            border: none;
+            background: #777;
+            color: white;
+            cursor: pointer;
+    }
+    #themeToggle:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+ 
+    
+    }
+    body {
+        text-align: center;
+        background: linear-gradient(to bottom, lightblue, lightpink);
+        line-height: 20px;
+        font-family: Arial, sans-serif; 
+    }
+
+      button {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #d61a7f;
+            background-color: white;
+            color: #d61a7f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 4px 10px #777777;
+            transition: all 200ms ease ; 
+      }
+              button:hover {
+            background-color: #d61a7f;
+            color: white;
+              }
+
+   @media ( max-width:768px){ 
+   .gallery{
+   grid-template-columns: 1fr;
+   }  
+   .main-image{
+   width: 100%; 
+   height: auto; 
+   }
+   h1{
+   font-size: 28px;
+   }
+   h2{
+   font-size: 18px; 
+   }
+   nav{
+   flex-direction: column; 
+   gap: 10px; 
+   }
+   }   
+        
+    
+
+
+</style>      
+
+</head>
+
+<body>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+    <button id="themeToggle">Dark Theme</button>
+    <h1>
+        Start Your Modeling Journey Today
+    </h1>
+    <h2>
+The most important thing to becoming a model is to believe in yourself and have confidence in your abilities. Here are some steps you can take to pursue a career in modeling: 
+    </h2>
+    
+     
+    <img class="main-image"
+    src="data:image/jpeg;base64,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">
+    <div class="gallery">
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH1GSUL7V15AEQKHIJivEs_BLAKZeyH9nvdw&s" alt="a women modellinhg">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLm-GWCH6G_k1GOnR_vIQzWLANAMr6I_sVpg&s " alt="big hair lady">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yqV-K35i6B2YXR8s6rtxcpjO0yA8syJSBw&s" alt="phtoshoot">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdB156bYoPeuLjNnCvGE0pjgteyFwIP2lyrQ&s"alt="walking">
+     </div>
+    
+    <p>
+            Becoming a model involves several steps, including building a portfolio, finding a reputable agency, and maintaining a
+            healthy lifestyle.<br /> It's important to research the industry and understand the different types of modeling, such as
+            fashion, commercial, or fitness modeling.<br/> Networking and attending casting calls can also help aspiring models gain
+            exposure and opportunities in the field.
+            <br/>
+            <a href="https://www.modelsdirect.com/become-a-model"> For more info📖</a>
+  
+     </p>
+     <button id="becomeModelBtn">
+        Become a model
+     </button>
+     <footer id="contact">
+     <h3>Contact</h3>
+     <p>Email: ncebakazindzamela14@gmail.com</p>
+     <a href="#">Instagram</a> /
+     <a href="#">Linkedin</a> /
+     <a href="#">Github</a>
+    
+       <p> Coded by Ncebakazi Ndzamela</p>
+     </footer>
+
+     <script>
+    const themeBtn = document.getElementById("themeToggle");
+        const modelBtn = document.getElementById("becomeModelBtn");
+
+        
+        themeBtn.addEventListener("click", function () {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                themeBtn.textContent = "Light Theme";
+            } else {
+                themeBtn.textContent = "Dark Theme";
+            }
+        });
+
+        
+        modelBtn.addEventListener("click", function () {
+            const name = prompt("Enter your name:");
+            const motivation = prompt("Why do you want to become a model?");
+            alert(`Thank you, ${name}! We will contact you shortly. Remember: ${motivation}. Stay confident and pursue your dreams!`);
+        });
+
+     </script>
+    </body>
+    
+</html>
